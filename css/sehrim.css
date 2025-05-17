@@ -3,3 +3,8 @@
   object-fit: cover;
   border-radius: 12px;
 }
+
+.takım-logo {
+  height: 200px; /* veya 30px, ihtiyaca göre ayarlarsın */
+  width: auto;  /* oran korunsun */
+}
