@@ -1,0 +1,90 @@
+/* Genel ayarlar */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #a2ded0, #5dade2);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Kart görünümü */
+.card {
+  background-color: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 400px;
+  box-sizing: border-box;
+  text-align: center;
+  margin-top: 50px; 
+}
+
+/* Başlık */
+.card h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Form öğeleri */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea,
+select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+/* Radio butonlar */
+input[type="radio"] {
+  margin: 0 5px 0 0;
+}
+
+/* Butonlar */
+button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  margin-bottom: 10px;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #357ab8;
+}
+
+/* Bağlantı stili */
+a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #4a90e2;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive destek */
+@media (max-width: 500px) {
+  .card {
+    padding: 20px;
+  }
+}
