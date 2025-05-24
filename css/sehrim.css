@@ -4,15 +4,11 @@
   border-radius: 12px;
 }
 
-.takım-logo {
-  height: 200px; 
-  width: auto;  
-}
-
 .btn.custom-btn {
   background-color: #000000 !important;
   color: #ffffff !important;
 }
+
 .btn.custom-btn:hover {
   background-color: #707070 !important;
   color: rgb(255, 255, 255) !important;
@@ -43,12 +39,13 @@
 
 .new-header {
   position: relative;
-  background-image: url("../img/sakarya.png");
-  background-position: center;
-  background-repeat: no-repeat ;
+  height: 180px;
+  display: flex;
+  align-items: center;
   color: white;
   z-index: 1;
   overflow: hidden;
+  padding: 1.5rem 0;
 }
 
 .new-header::before {
@@ -58,13 +55,460 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(37, 94, 0, 0.5); 
+  background-color: rgba(20, 50, 0, 0.6);
   z-index: -1;
 }
 
-.new-header h1,
-.new-header p,
+.sakarya-map {
+  position: absolute;
+  left: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 120px;
+  height: auto;
+  opacity: 0.8;
+  z-index: 0;
+}
+
+/* Takımımız Butonu */
+.team-btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background: linear-gradient(45deg, #1e4d2b, #228B22);
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(34, 139, 34, 0.2);
+  margin: 1rem 0;
+}
+
+.team-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(34, 139, 34, 0.3);
+  background: linear-gradient(45deg, #228B22, #2d6a39);
+  color: white;
+  text-decoration: none;
+}
+
+.team-btn i {
+  margin-right: 8px;
+}
+
 .new-header .container {
   position: relative;
   z-index: 2;
+  text-align: center;
+  width: 100%;
+}
+
+.new-header h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.new-header p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+/* Ana stiller */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f8f4;
+  color: #2c3e50;
+  line-height: 1.6;
+}
+
+/* Hero bölümü */
+.hero {
+  position: relative;
+  height: 60vh;
+  min-height: 400px;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(34, 139, 34, 0.8), rgba(0, 100, 0, 0.8));
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+.hero-content::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  transform: translateY(-50%);
+  width: 200px;
+  height: 200px;
+  background-image: url('../img/sakarya.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.2;
+  z-index: -1;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  opacity: 0.9;
+}
+
+/* Şehir kartları */
+.city-card {
+  background-color: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  transition: transform 0.3s ease;
+  height: 100%;
+  border: 1px solid rgba(34, 139, 34, 0.1);
+}
+
+.city-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(34, 139, 34, 0.15);
+}
+
+.city-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.city-card:hover img {
+  transform: scale(1.05);
+}
+
+.city-card-body {
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.city-card-body::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(to right, #228B22, #006400);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.city-card:hover .city-card-body::after {
+  opacity: 1;
+}
+
+.city-card-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #006400;
+  margin-bottom: 1rem;
+}
+
+.city-card-text {
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+/* Özellikler listesi */
+.features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.feature-item {
+  background-color: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+}
+
+.feature-item:hover {
+  background-color: #e8f4fc;
+  transform: translateY(-5px);
+}
+
+.feature-icon {
+  font-size: 2rem;
+  color: #3498db;
+  margin-bottom: 1rem;
+}
+
+.feature-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+/* Galeri */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.gallery-item {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  aspect-ratio: 16/9;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1);
+}
+
+.gallery-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  color: white;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover .gallery-caption {
+  transform: translateY(0);
+}
+
+/* Section title */
+.section-title {
+  color: #006400;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60%;
+  height: 3px;
+  background: linear-gradient(to right, #228B22, transparent);
+}
+
+/* Responsive düzenlemeler */
+@media (max-width: 768px) {
+  .hero-content::before {
+    width: 150px;
+    height: 150px;
+    right: 5%;
+  }
+
+  .hero {
+    height: 50vh;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .city-card img {
+    height: 200px;
+  }
+
+  .city-card-body {
+    padding: 1.5rem;
+  }
+
+  .features-list {
+    grid-template-columns: 1fr;
+  }
+
+  #sehirSlider .carousel-item {
+    height: 300px;
+  }
+
+  #sehirSlider .carousel-caption {
+    padding: 1rem;
+  }
+
+  #sehirSlider .carousel-caption h5 {
+    font-size: 1.2rem;
+  }
+}
+
+/* Animasyonlar */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-in {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+/* Slider Styles */
+#sehirSlider {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  margin-bottom: 3rem;
+}
+
+#sehirSlider .carousel-item {
+  height: 500px;
+}
+
+#sehirSlider .carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#sehirSlider .carousel-caption {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem;
+  text-align: left;
+}
+
+#sehirSlider .carousel-caption h5 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+#sehirSlider .carousel-caption p {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+#sehirSlider .carousel-control-prev,
+#sehirSlider .carousel-control-next {
+  width: 5%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+#sehirSlider:hover .carousel-control-prev,
+#sehirSlider:hover .carousel-control-next {
+  opacity: 1;
+}
+
+/* İlgi Alanları Bölümü */
+.interests-section {
+  padding: 3rem 0;
+  background-color: #f8f9fa;
+}
+
+.interest-card {
+  background: white;
+  border-radius: 15px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  border-left: 4px solid #228B22;
+}
+
+.interest-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.interest-card h3 {
+  color: #228B22;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.interest-card p {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.interest-card .interest-icon {
+  font-size: 2.5rem;
+  color: #228B22;
+  margin-bottom: 1rem;
+  opacity: 0.8;
+}
+
+.interest-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+@media (max-width: 768px) {
+  .interest-card {
+    padding: 1.2rem;
+  }
+
+  .interest-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .interest-card .interest-icon {
+    font-size: 2rem;
+  }
 }

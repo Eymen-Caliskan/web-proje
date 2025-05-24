@@ -1,15 +1,25 @@
+<?php
+header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+header("Cache-Control: post-check=0, pre-check=0", false);
+header("Pragma: no-cache");
+?>
 <!DOCTYPE html>
 <html lang="tr">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Takımımız</title>
-  <link rel="stylesheet" href="css/sehrim.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <title>Sakaryaspor - Takımımız</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="css/takimimiz.css">
 </head>
+
 <body>
 
-  <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
       <a class="navbar-brand" href="anasayfa.html">Kişisel Web Sitem</a>
@@ -22,127 +32,189 @@
           <li class="nav-item"><a class="nav-link" href="cv.html">Özgeçmiş</a></li>
           <li class="nav-item"><a class="nav-link active" href="sehrim.html">Şehrim</a></li>
           <li class="nav-item"><a class="nav-link" href="ilgi.html">İlgi Alanlarım</a></li>
-          <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
+          <li class="nav-item"><a class="nav-link" href="iletisim.php">İletişim</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- İçerik -->
-  <main class="container my-5">
-    <h1 class="text-center mb-4">Şehrimizin Takımı: Sakaryaspor</h1>
-
-    <div class="row align-items-center">
-      <div class="col-md-4">
-        <img src="img/sakaryaspor-logo.png" alt="Sakaryaspor Logosu" class="takım-logo">
-      </div>
-      <div class="col-md-6">
-        <p>
-          Sakaryaspor, 1965 yılında kurulmuş ve Sakarya şehrini Türkiye liglerinde temsil eden köklü bir futbol takımıdır.
-          Yeşil-siyah renkleriyle tanınan takım, birçok yetenekli futbolcu yetiştirmiştir.
-          <br><br>
-          Maçlarını 2017 yılında yenilenen Sakarya Atatürk Stadyumu'nda oynar. Taraftar grubu (Tatangalar), takımına desteğini esirgemeyerek Türkiye'nin en ateşli taraftarlarından biri oluşturur.
-        </p>
+  <!-- Header Section -->
+  <header class="team-header">
+    <div class="container">
+      <h1>SAKARYASPOR</h1>
+      <p>1965'ten Beri Gurur ve Tutku</p>
+      <div class="social-links">
+        <a href="https://www.instagram.com/sakaryaspor?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+          target="_blank" class="social-link"><i class="fab fa-twitter"></i> Twitter</a>
+        <a href="https://x.com/Sakaryaspor" target="_blank" class="social-link"><i class="fab fa-instagram"></i>
+          Instagram</a>
+        <a href="https://www.sakaryaspor.org.tr/" target="_blank" class="social-link"><i class="far fa-heart"></i>
+          Kulüp Sayfası</a>
       </div>
     </div>
+  </header>
 
-    <section class="mt-5">
-      <h2>Başarılar</h2>
-      <ul>
-        <li>1987 - 1988 yılı Türkiye Kupası.</li>
-        <li>3 adet TFF 1. Lig'de şampiyonluğu yanında defalarca 1. Lig mücadeleleri.</li>
-        <li>Türkiye'nin birçok üst düzey oyuncusunu yetiştirmiştir. Hakan Şükür, Tuncay Şanlı, Oğuz Çetin gibi oyuncular Sakaryaspordan yetişen oyunculara örnektir.</li>
-        
-    </ul>
-<!--- İlk 11 -->
-    </section>
-<section class="container my-5">
-  <h2 class="text-center mb-4">Aktif İlk 11</h2>
-  <h5 class="text-center mb-4">Diziliş: 4-2-3-1</h5>
-  <div class="table-responsive">
-    <table class="table table-striped table-bordered text-center">
-      <thead class="table-dark">
-        <tr>
-          <th>#</th>
-          <th>İsim</th>
-          <th>Pozisyon</th>
-          <th>Forma Numarası</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>1</td>
-          <td>Jakub Szumski </td>
-          <td>Kaleci</td>
-          <td>29</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Bülent Uzun </td>
-          <td>Sol bek</td>
-          <td>5</td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>Kahraman Demirtaş </td>
-          <td>Stoper</td>
-          <td>4</td>
-      </tbody>
-        <tr>
-          <td>4</td>
-          <td>Nicolas N'Koulou </td>
-          <td>Stoper</td>
-          <td>33</td>
-        </tr>
-        <tr>
-          <td>5</td>
-          <td>Serkan Yavuz </td>
-          <td>Sağ bek</td>
-          <td>2</td>
-        </tr>
-        <tr>
-          <td>6</td>
-          <td>Rayane Aabid  </td>
-          <td>Orta saha</td>
-          <td>10</td>
-        </tr>
-        <tr>
-          <td>7</td>
-          <td>Nsana Simon  </td>
-          <td>Orta saha</td>
-          <td>95</td>
-        </tr>
-        <tr>
-          <td>8</td>
-          <td>Burak Altıparmak </td>
-          <td>Orta saha</td>
-          <td>36</td>
-        </tr>
+  <!-- Team Section -->
+  <section class="team-section">
+    <div class="container">
+      <div class="team-card animate-in">
+        <div class="row align-items-center">
+          <div class="col-md-4">
+            <img src="img/Sakaryaspor-Logo.png" alt="Sakaryaspor Logosu" class="takım-logo">
+          </div>
+          <div class="col-md-8">
+            <div class="team-info">
+              <h2>Takım Bilgileri</h2>
+              <div class="team-stats">
+                <div class="stat-item">
+                  <i class="fas fa-trophy"></i>
+                  <span class="stat-label">Kuruluş:</span>
+                  <span>1965</span>
+                </div>
+                <div class="stat-item">
+                  <i class="fas fa-home"></i>
+                  <span class="stat-label">Stadyum:</span>
+                  <span>Sakarya Atatürk Stadı</span>
+                </div>
+                <div class="stat-item">
+                  <i class="fas fa-tshirt"></i>
+                  <span class="stat-label">Renkler:</span>
+                  <span>Yeşil-Siyah</span>
+                </div>
+              </div>
+              <p>Sakaryaspor, 1965 yılında kurulmuş olup, Sakarya şehrini temsil eden profesyonel futbol kulübüdür.
+                Yeşil-siyah renkleriyle tanınan takım, birçok yetenekli futbolcu yetiştirmiştir.
+                Maçlarını 2017 yılında yenilenen Sakarya Atatürk Stadyumu'nda oynar.
+                Taraftar grubu (Tatangalar), takımına desteğini esirgemeyerek Türkiye'nin en ateşli taraftarlarından
+                biri oluşturur.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        <tr>
-          <td>9</td>
-          <td>Burak Çoban </td>
-          <td>Sol Kanat</td>
-          <td>94</td>
-        </tr>
+  <!-- Achievements Section -->
+  <section class="achievements">
+    <div class="container">
+      <h2 class="text-center mb-4">Başarılar ve Tarihçe</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="achievement-item animate-in">
+            <i class="fas fa-trophy"></i>
+            <h3>Kupalar</h3>
+            <ul class="list-unstyled">
+              <li>1987 - 1988 yılı Türkiye Kupası</li>
+              <li>3 adet TFF 1. Lig şampiyonluğu</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="achievement-item animate-in">
+            <i class="fas fa-users"></i>
+            <h3>Taraftar</h3>
+            <p>Türkiye'nin en ateşli taraftar gruplarından biri olan Tatangalar, takımlarına sürekli destek vermektedir.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="achievement-item animate-in">
+            <i class="fas fa-star"></i>
+            <h3>Yetiştirdiği Yıldızlar</h3>
+            <p>Hakan Şükür, Tuncay Şanlı, Oğuz Çetin gibi birçok üst düzey futbolcu Sakaryaspor'dan yetişmiştir.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        <tr>
-          <td>10</td>
-          <td>Emre Demir  </td>
-          <td>Sağ Kanat</td>
-          <td>14</td>
-        </tr>
-        <tr>
-          <td>11</td>
-          <td>Mendy Mamadou</td>
-          <td>Forvet</td>
-          <td>66</td>
-    </table>
-  </div>
-</section>
-
-
-  </main>
+  <!-- Current Team Section -->
+  <section class="container my-5">
+    <div class="team-card animate-in">
+      <h2 class="text-center mb-4">Aktif İlk 11</h2>
+      <h5 class="text-center mb-4">Diziliş: 4-2-3-1</h5>
+      <div class="table-responsive">
+        <table class="table table-striped table-bordered text-center">
+          <thead class="table-dark">
+            <tr>
+              <th>#</th>
+              <th>İsim</th>
+              <th>Pozisyon</th>
+              <th>Forma Numarası</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Jakub Szumski</td>
+              <td>Kaleci</td>
+              <td>29</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Bülent Uzun</td>
+              <td>Sol bek</td>
+              <td>5</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Kahraman Demirtaş</td>
+              <td>Stoper</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Nicolas N'Koulou</td>
+              <td>Stoper</td>
+              <td>33</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>Serkan Yavuz</td>
+              <td>Sağ bek</td>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>Rayane Aabid</td>
+              <td>Orta saha</td>
+              <td>10</td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>Nsana Simon</td>
+              <td>Orta saha</td>
+              <td>95</td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td>Burak Altıparmak</td>
+              <td>Orta saha</td>
+              <td>36</td>
+            </tr>
+            <tr>
+              <td>9</td>
+              <td>Burak Çoban</td>
+              <td>Sol Kanat</td>
+              <td>94</td>
+            </tr>
+            <tr>
+              <td>10</td>
+              <td>Emre Demir</td>
+              <td>Sağ Kanat</td>
+              <td>14</td>
+            </tr>
+            <tr>
+              <td>11</td>
+              <td>Mendy Mamadou</td>
+              <td>Forvet</td>
+              <td>66</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
 
   <!-- Footer -->
   <footer class="bg-dark text-white text-center p-3 mt-5">
@@ -151,4 +223,5 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

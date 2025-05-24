@@ -1,0 +1,316 @@
+.takım-logo {
+    max-width: 250px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.takım-logo:hover {
+    transform: scale(1.05);
+}
+
+/* Mobil cihazlar için responsive ayar */
+@media (max-width: 768px) {
+    .takım-logo {
+        max-width: 200px;
+    }
+}
+
+/* Çok küçük ekranlar için */
+@media (max-width: 576px) {
+    .takım-logo {
+        max-width: 150px;
+    }
+}
+
+/* Header Styles */
+.team-header {
+    background: linear-gradient(135deg, #1e4d2b, #2d6a39);
+    color: white;
+    padding: 4rem 0;
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.team-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('../img/pattern.png');
+    opacity: 0.1;
+    z-index: 1;
+}
+
+.team-header .container {
+    position: relative;
+    z-index: 2;
+}
+
+.team-header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.team-header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Team Content */
+.team-section {
+    padding: 2rem 0;
+}
+
+.team-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease;
+    padding: 2rem;
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.team-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.team-info {
+    padding: 1rem;
+}
+
+.team-info h2 {
+    color: #1e4d2b;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.team-info p {
+    color: #666;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.team-stats {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+    border-left: 4px solid #1e4d2b;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.8rem;
+}
+
+.stat-item:last-child {
+    margin-bottom: 0;
+}
+
+.stat-item i {
+    color: #1e4d2b;
+    margin-right: 1rem;
+    font-size: 1.2rem;
+}
+
+.stat-label {
+    font-weight: 600;
+    margin-right: 0.5rem;
+    color: #333;
+}
+
+/* Achievement Section */
+.achievements {
+    background: #f8f9fa;
+    padding: 3rem 0;
+    margin: 3rem 0;
+}
+
+.achievement-item {
+    text-align: center;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
+.achievement-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.achievement-item i {
+    font-size: 2.5rem;
+    color: #1e4d2b;
+    margin-bottom: 1rem;
+}
+
+.achievement-item h3 {
+    color: #1e4d2b;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.achievement-item p {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.achievement-item ul {
+    text-align: left;
+    color: #666;
+    font-size: 0.9rem;
+    padding-left: 1rem;
+}
+
+.achievement-item li {
+    margin-bottom: 0.5rem;
+}
+
+/* Table Styles */
+.table {
+    margin-top: 2rem;
+    border: none;
+}
+
+.table thead {
+    background: linear-gradient(135deg, #1e4d2b, #2d6a39);
+    color: white;
+}
+
+.table th {
+    font-weight: 600;
+    border: none;
+}
+
+.table td {
+    vertical-align: middle;
+    border-color: #e9ecef;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(30, 77, 43, 0.05);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .team-header {
+        padding: 3rem 0;
+    }
+
+    .team-header h1 {
+        font-size: 2.5rem;
+    }
+
+    .team-image {
+        height: 250px;
+    }
+
+    .team-info {
+        padding: 1rem 0;
+    }
+
+    .team-info h2 {
+        font-size: 1.5rem;
+    }
+
+    .achievement-item {
+        margin-bottom: 1rem;
+    }
+
+    .takım-logo {
+        max-width: 200px;
+        margin-bottom: 1rem;
+    }
+}
+
+/* Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-in {
+    animation: fadeInUp 0.6s ease backwards;
+}
+
+/* Button Styles */
+.team-btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background: linear-gradient(45deg, #1e4d2b, #2d6a39);
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    margin-top: 1rem;
+}
+
+.team-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(30, 77, 43, 0.3);
+    color: white;
+    text-decoration: none;
+}
+
+/* Social Media Links */
+.social-links {
+    margin-top: 1.5rem;
+}
+
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    margin: 0 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.social-link i {
+    margin-right: 8px;
+}

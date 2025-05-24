@@ -1,22 +1,151 @@
+/* Ana stiller */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f8f9fa;
+  color: #2c3e50;
+}
+
+/* Başlık bölümü */
+.baslik {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.alt-baslik {
+  font-size: 1.1rem;
+  color: #6c757d;
+  font-weight: 300;
+}
+
+/* Fotoğraf stili */
+.fotograf {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 5px solid white;
+}
+
+.fotograf:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Bölüm başlıkları */
+.bolum-baslik {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #3498db;
+  display: inline-block;
+}
+
+/* Eğitim ve deneyim bölümleri */
 .egitim-baslik {
   font-size: 1.2rem;
-  font-weight: bold;
+  font-weight: 600;
+  color: #34495e;
+  margin-bottom: 0.3rem;
 }
 
 .tarih {
+  font-size: 0.9rem;
+  color: #7f8c8d;
   font-style: italic;
-  color: #555;
+  margin-bottom: 1rem;
 }
 
-.ozgecmis-icerik ul {
-  list-style-type: square;
-  padding-left: 20px;
+/* Liste stilleri */
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
 }
 
-.fotograf {
-  width: 300px;
-  height: 300px;
-  object-fit: cover; 
-  border-radius: 10px; 
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); 
+ul li {
+  margin-bottom: 1rem;
+  padding: 0;
+}
+
+/* Beceriler bölümü */
+.beceriler-grup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.beceri-item {
+  background-color: #e8f4fc;
+  color: #2980b9;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.beceri-item:hover {
+  background-color: #3498db;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Kartlar için genel stil */
+.cv-kart {
+  background-color: white;
+  border-radius: 15px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.cv-kart:hover {
+  transform: translateY(-5px);
+}
+
+/* Responsive düzenlemeler */
+@media (max-width: 768px) {
+  .baslik {
+    font-size: 2rem;
+  }
+
+  .bolum-baslik {
+    font-size: 1.5rem;
+  }
+
+  .fotograf {
+    width: 200px;
+    height: 200px;
+  }
+
+  .cv-kart {
+    padding: 1.5rem;
+  }
+}
+
+/* İletişim bilgileri */
+.iletisim-bilgileri {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.iletisim-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #34495e;
+  font-size: 0.9rem;
+}
+
+.iletisim-item i {
+  color: #3498db;
 }

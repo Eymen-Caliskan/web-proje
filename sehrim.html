@@ -1,15 +1,25 @@
+<?php
+header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+header("Cache-Control: post-check=0, pre-check=0", false);
+header("Pragma: no-cache");
+?>
 <!DOCTYPE html>
 <html lang="tr">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Şehrim</title>
-  <link rel="stylesheet" href="css/sehrim.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <title>Şehrim - Sakarya</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/sehrim.css">
 </head>
-<body>
 
-  <!-- Navbar -->
+<body>
+  <!-- Navigasyon Menüsü -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
       <a class="navbar-brand" href="anasayfa.html">Kişisel Web Sitem</a>
@@ -22,128 +32,182 @@
           <li class="nav-item"><a class="nav-link" href="cv.html">Özgeçmiş</a></li>
           <li class="nav-item"><a class="nav-link active" href="sehrim.html">Şehrim</a></li>
           <li class="nav-item"><a class="nav-link" href="ilgi.html">İlgi Alanlarım</a></li>
-          <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
+          <li class="nav-item"><a class="nav-link" href="iletisim.php">İletişim</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- Başlık -->
-  <header class="new-header text-white text-center p-4">
-  <h1>Sakarya</h1>
-  <p>Doğası, tarihi ve kültürüyle Marmara'nın incisi</p>
-  <div class="container mt-4 text-end">
-    <a href="takimimiz.html" class="btn custom-btn">Takımımız</a>
+  <!-- Header Bölümü -->
+  <header class="new-header">
+    <img src="img/sakarya.png" class="sakarya-map" alt="Sakarya Haritası">
+    <div class="container">
+      <h1>Sakarya</h1>
+      <p>Doğanın ve tarihin buluştuğu şehir</p>
+      <a href="takimimiz.html" class="team-btn">
+        <i class="fas fa-futbol"></i>
+        Takımımız
+      </a>
+    </div>
+  </header>
+
+  <!-- Slider Bölümü -->
+  <div class="container mt-5">
+    <div id="sehirSlider" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <a href="#sapanca">
+            <img src="img/sapanca.jpg" class="d-block w-100" alt="Sapanca Gölü">
+            <div class="carousel-caption">
+              <h5>Sapanca Gölü</h5>
+              <p>Sakarya'nın doğal güzelliklerinden biri</p>
+            </div>
+          </a>
+        </div>
+        <div class="carousel-item">
+          <a href="#acarlar">
+            <img src="img/acarlar.JPG" class="d-block w-100" alt="Acarlar Longozu">
+            <div class="carousel-caption">
+              <h5>Acarlar Longozu</h5>
+              <p>Türkiye'nin en büyük subasar ormanı</p>
+            </div>
+          </a>
+        </div>
+        <div class="carousel-item">
+          <a href="#karasu">
+            <img src="img/karasu.jpg" class="d-block w-100" alt="Karasu Plajı">
+            <div class="carousel-caption">
+              <h5>Karasu Plajı</h5>
+              <p>Karadeniz'in muhteşem sahili</p>
+            </div>
+          </a>
+        </div>
+        <div class="carousel-item">
+          <a href="#deprem">
+            <img src="img/deprem.jpg" class="d-block w-100" alt="Deprem Müzesi">
+            <div class="carousel-caption">
+              <h5>Deprem Müzesi</h5>
+              <p>Geçmişten ders almak için önemli bir merkez</p>
+            </div>
+          </a>
+        </div>
+        <div class="carousel-item">
+          <a href="#maden">
+            <img src="img/madenderesi.jpg" class="d-block w-100" alt="Maden Deresi">
+            <div class="carousel-caption">
+              <h5>Maden Deresi</h5>
+              <p>Doğal güzellikleriyle ünlü vadi</p>
+            </div>
+          </a>
+        </div>
+        <div class="carousel-item">
+          <a href="#tarakli">
+            <img src="img/taraklı.jpg" class="d-block w-100" alt="Taraklı Evleri">
+            <div class="carousel-caption">
+              <h5>Taraklı Evleri</h5>
+              <p>Osmanlı mimarisinin yaşayan örnekleri</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#sehirSlider" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#sehirSlider" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
   </div>
-</header>
 
-
-  
-  <!-- Slider -->
-  <div id="slider" class="carousel slide container mt-4" data-bs-ride="carousel">
-    <div class="carousel-inner rounded">
-      <div class="carousel-item active">
-        <a href="#sapanca">
-          <img src="img/sapanca.jpg" class="d-block w-100" alt="Sapanca Gölü">
-        </a>
+  <!-- Ana İçerik -->
+  <main class="container my-5">
+    <!-- Şehir Detayları -->
+    <div class="row">
+      <div class="col-md-6 mb-4">
+        <div class="city-card animate-in" id="sapanca">
+          <div class="city-card-body">
+            <h2 class="city-card-title">Sapanca Gölü</h2>
+            <p class="city-card-text">
+              Sapanca Gölü, Sakarya'nın doğa harikalarından biri olup Marmara Bölgesi'nin en gözde tatil noktalarından
+              biridir.
+              Göl, sakin yapısıyla özellikle hafta sonu kaçamakları için tercih edilmektedir. Etrafında yürüyüş ve
+              bisiklet
+              yolları bulunan göl çevresi, doğa yürüyüşleri ve açık hava sporları için uygundur.
+            </p>
+          </div>
+        </div>
       </div>
-      <div class="carousel-item">
-        <a href="#acarlar">
-          <img src="img/acarlar.JPG" class="d-block w-100" alt="Acarlar Longozu">
-        </a>
+      <div class="col-md-6 mb-4">
+        <div class="city-card animate-in" id="acarlar">
+          <div class="city-card-body">
+            <h2 class="city-card-title">Acarlar Longozu</h2>
+            <p class="city-card-text">
+              Acarlar Longozu, Türkiye'nin en büyük subasar ormanıdır. Longoz; tatlı su ile beslenen, çok sayıda endemik
+              bitki ve hayvan türüne ev sahipliği yapan ekolojik açıdan son derece değerli bir alandır. Özellikle göçmen
+              kuşlar için önemli bir durak noktasıdır.
+            </p>
+          </div>
+        </div>
       </div>
-      <div class="carousel-item">
-        <a href="#karasu">
-          <img src="img/karasu.jpg" class="d-block w-100" alt="Karasu Plajı">
-        </a>
+      <div class="col-md-6 mb-4">
+        <div class="city-card animate-in" id="karasu">
+          <div class="city-card-body">
+            <h2 class="city-card-title">Karasu Plajı</h2>
+            <p class="city-card-text">
+              Karasu Plajı, yaklaşık 20 kilometrelik altın sarısı kumsalıyla öne çıkar. Yaz aylarında Sakarya'nın en çok
+              ziyaret edilen tatil beldesi haline gelir. Sahil boyunca oteller, pansiyonlar ve kafeler bulunmaktadır.
+            </p>
+          </div>
+        </div>
       </div>
-      <div class="carousel-item">
-        <a href="#deprem">
-          <img src="img/deprem.jpg" class="d-block w-100" alt="Deprem Müzesi">
-        </a>
+      <div class="col-md-6 mb-4">
+        <div class="city-card animate-in" id="deprem">
+          <div class="city-card-body">
+            <h2 class="city-card-title">Deprem Müzesi</h2>
+            <p class="city-card-text">
+              1999 Marmara Depremi'nin acı izlerini taşıyan Deprem Kültür Müzesi, deprem bilincini artırmak ve geçmişte
+              yaşanan felaketin unutulmamasını sağlamak amacıyla kurulmuştur. Müzede interaktif eğitim materyalleri ve
+              geçmiş depremlere ait belgeler bulunmaktadır.
+            </p>
+          </div>
+        </div>
       </div>
-      <div class="carousel-item">
-        <a href="#maden">
-          <img src="img/madenderesi.jpg" class="d-block w-100" alt="Maden Deresi">
-        </a>
+      <div class="col-md-6 mb-4">
+        <div class="city-card animate-in" id="maden">
+          <div class="city-card-body">
+            <h2 class="city-card-title">Maden Deresi</h2>
+            <p class="city-card-text">
+              Sakarya'nın Karasu ilçesine bağlı Maden Deresi, yemyeşil doğası, şelaleleri ve serin sularıyla
+              doğaseverlerin
+              vazgeçilmez duraklarından biridir. Kampçılar, doğa yürüyüşü yapanlar ve fotoğraf tutkunları için harika
+              bir
+              kaçış noktasıdır.
+            </p>
+          </div>
+        </div>
       </div>
-      <div class="carousel-item">
-        <a href="#tarakli">
-          <img src="img/taraklı.jpg" class="d-block w-100" alt="Taraklı Evleri">
-        </a>
+      <div class="col-md-6 mb-4">
+        <div class="city-card animate-in" id="tarakli">
+          <div class="city-card-body">
+            <h2 class="city-card-title">Taraklı Evleri</h2>
+            <p class="city-card-text">
+              Taraklı, Osmanlı döneminden günümüze kadar ulaşmış olan geleneksel mimarisiyle ünlü, tarihi bir yerleşim
+              merkezidir. Türkiye'nin "Cittaslow" (sakin şehir) unvanına sahip yerlerinden biridir. Osmanlı dönemi
+              çarşısı
+              ve tarihi yapıları görülmeye değerdir.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#slider" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon"></span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#slider" data-bs-slide="next">
-      <span class="carousel-control-next-icon"></span>
-    </button>
-  </div>
+  </main>
 
-  <!-- Bilgi Bölümleri -->
-  <section class="container my-5">
-      <div class="row row-cols-1 row-cols-md-2 g-4"></div>
-        <div class="col">
-          <div class="card h-100">
-            <div class="card-body">
-              <h5 id="sapanca" class="card-title">Sapanca Gölü</h5>
-              <p class="card-text">Sapanca Gölü, Sakarya’nın doğa harikalarından biri olup Marmara Bölgesi'nin en gözde tatil noktalarından biridir. Göl, sakin yapısıyla özellikle hafta sonu kaçamakları için tercih edilmektedir. Etrafında yürüyüş ve bisiklet yolları bulunan göl çevresi, doğa yürüyüşleri ve açık hava sporları için uygundur. Ayrıca göl çevresindeki restoran ve kafeler, muhteşem manzarası eşliğinde ziyaretçilere çeşitli lezzetler sunmaktadır. Yaz aylarında kano, deniz bisikleti gibi aktiviteler yapılabilirken, kışın ise göl etrafı fotoğrafçılar ve huzur arayanlar için ideal bir ortam sunar..</p>
-            </div>
-          </div>
-        </div>
-<p></p>
-        <div class="col">
-          <div class="card h-100">
-            <div class="card-body">
-              <h5 id="acarlar" class="card-title">Acarlar Longozu</h5>
-              <p class="card-text">Acarlar Longozu, Sakarya'nın Karasu ve Kaynarca ilçeleri arasında yer alır ve Türkiye'nin en büyük tek parça halindeki subasar ormanıdır. Longoz; tatlı su ile beslenen, çok sayıda endemik bitki ve hayvan türüne ev sahipliği yapan ekolojik açıdan son derece değerli bir alandır. Özellikle göçmen kuşlar için önemli bir durak olan bölge, doğa fotoğrafçıları ve kuş gözlemcileri için büyüleyici manzaralar sunar. Ziyaretçiler yürüyüş yollarında gezebilir, kano ile su üzerinde doğayı keşfedebilir ve piknik alanlarında keyifli vakit geçirebilir.</p>
-            </div>
-          </div>
-        </div>
-<p></p>
-        <div class="col">
-          <div class="card h-100">
-            <div class="card-body">
-              <h5 id="karasu" class="card-title">Karasu Plajı</h5>
-              <p class="card-text">Karasu Plajı, Türkiye'nin Karadeniz kıyısındaki en uzun sahil şeritlerinden birine sahip olup yaklaşık 20 kilometrelik altın sarısı kumsalıyla öne çıkar. Yaz aylarında Sakarya’nın en çok ziyaret edilen tatil beldesi haline gelir. Sahil boyunca oteller, pansiyonlar ve kafeler bulunmaktadır. Denizi genellikle serin ve dalgalı olsa da, yaz sezonunda cankurtaran hizmetleriyle güvenlidir. Plaj; güneşlenmek, yüzmek ve deniz sporları yapmak isteyenler için ideal olduğu kadar, yürüyüş ve bisiklet yollarıyla da hareketli bir sosyal yaşam sunar.</p>
-            </div>
-          </div>
-        </div>
-<p></p>
-        <div class="col">
-          <div class="card h-100">
-            <div class="card-body">
-              <h5 id="deprem" class="card-title">Deprem Müzesi</h5>
-              <p class="card-text">1999 Marmara Depremi’nin acı izlerini taşıyan Deprem Kültür Müzesi, deprem bilincini artırmak ve geçmişte yaşanan felaketin unutulmamasını sağlamak amacıyla kurulmuştur. Müzede deprem öncesi, sırası ve sonrasında yapılması gerekenlerle ilgili bilgiler sunulmakta, canlandırmalar ve interaktif eğitim materyalleri yer almaktadır. Ayrıca geçmiş depremlere ait fotoğraflar, belgeler ve kişisel hikâyelerle ziyaretçilere duygusal bir deneyim yaşatır. Eğitim kurumlarının da sıkça ziyaret ettiği müze, deprem farkındalığı açısından önemli bir rol oynamaktadır.</p>
-            </div>
-          </div>
-        </div>
-<p></p>
-        <div class="col">
-          <div class="card h-100">
-            <div class="card-body">
-              <h5 id="maden" class="card-title">Maden Deresi</h5>
-              <p class="card-text">Sakarya’nın Karasu ilçesine bağlı Maden Deresi, yemyeşil doğası, şelaleleri ve serin sularıyla doğaseverlerin vazgeçilmez duraklarından biridir. Eski dönemlerde bölgede maden çıkarıldığı için bu ismi almıştır. Bugün ise sessizliği ve huzur dolu atmosferi ile kampçılar, doğa yürüyüşü yapanlar ve fotoğraf tutkunları için harika bir kaçış noktasıdır. Ziyaretçiler kayalık dere yatağı boyunca yürüyüş yapabilir, küçük şelalelerin oluşturduğu doğal havuzlarda serinleyebilir. Özellikle yaz aylarında bölge, piknik yapmak isteyen ailelerin de uğrak noktasıdır.</p>
-            </div>
-          </div>
-        </div>
-<p></p>
-        <div class="col">
-          <div class="card h-100">
-            <div class="card-body">
-              <h5 id="tarakli" class="card-title">Taraklı Evleri</h5>
-              <p class="card-text">Taraklı, Osmanlı döneminden günümüze kadar ulaşmış olan geleneksel mimarisiyle ünlü, tarihi bir yerleşim merkezidir. Ahşap ve taş karışımı iki katlı evleri, dar taş sokakları ve sakin atmosferiyle adeta zamanda yolculuk yaptırır. Taraklı, aynı zamanda Türkiye’nin "Cittaslow" (sakin şehir) unvanına sahip yerlerinden biridir. Kasabada gezerken Osmanlı dönemi çarşısı, Yunus Paşa Camii ve tarihi hamam gibi yapılar ziyaret edilebilir. Yöresel el sanatları ve geleneksel ev yemekleri de Taraklı’nın kültürel zenginliğine katkı sunar.</p>
-            </div>
-          </div>
-        </div>
-
-  </section>
- 
-  <footer class="bg-dark text-white text-center p-3 mt-4">
-    <p>&copy; 2025 Eymen Çalışkan - Web Teknolojileri Projesi</p>
+  <!-- Alt Bilgi -->
+  <footer class="bg-dark text-white text-center p-3">
+    <p>&copy; 2024 Eymen Çalışkan - Web Teknolojileri Projesi</p>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

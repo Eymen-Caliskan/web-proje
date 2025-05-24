@@ -1,12 +1,24 @@
+<?php
+header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+header("Cache-Control: post-check=0, pre-check=0", false);
+header("Pragma: no-cache");
+?>
+
 <!DOCTYPE html>
 <html lang="tr">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
   <title>Özgeçmiş</title>
   <link rel="stylesheet" href="css/cv.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
+
 <body>
 
   <!-- Navigasyon Menüsü -->
@@ -22,7 +34,7 @@
           <li class="nav-item"><a class="nav-link active" href="cv.html">Özgeçmiş</a></li>
           <li class="nav-item"><a class="nav-link" href="sehrim.html">Şehrim</a></li>
           <li class="nav-item"><a class="nav-link" href="ilgi.html">İlgi Alanlarım</a></li>
-          <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
+          <li class="nav-item"><a class="nav-link" href="iletisim.php">İletişim</a></li>
         </ul>
       </div>
     </div>
@@ -36,60 +48,83 @@
 
   <!-- Özgeçmiş İçerik -->
   <main class="container my-5">
-  <div class="row">
-    <!-- Fotoğraf -->
-    <div class="col-md-4 order-1 order-md-2 text-center mb-4">E
-      <img src="img/cv_foto.jpg" alt="Eymen Çalışkan" class="fotograf" style="max-width: 250px;">
-      <p class="mt-2 fw-bold">Eymen Çalışkan</p>
+    <div class="row">
+      <!-- Fotoğraf ve İletişim -->
+      <div class="col-md-4 order-1 order-md-2 text-center mb-4">
+        <div class="cv-kart">
+          <img src="img/cv_foto.jpg" alt="Eymen Çalışkan" class="fotograf">
+          <p class="mt-3 mb-2 h5">Eymen Çalışkan</p>
+          <p class="text-muted mb-3">Bilgisayar Mühendisliği Öğrencisi</p>
+          <div class="iletisim-bilgileri">
+            <a href="https://github.com/Eymen-Caliskan" target="_blank"
+              class="btn btn-outline-primary btn-sm w-100 mb-2">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/eymen-%C3%A7al%C4%B1%C5%9Fkan-184a09351/" target="_blank"
+              class="btn btn-outline-primary btn-sm w-100">
+              <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- CV İçeriği -->
+      <div class="col-md-8 order-2 order-md-1">
+        <!-- Eğitim -->
+        <div class="cv-kart">
+          <h2 class="bolum-baslik">Eğitim</h2>
+          <article>
+            <h5 class="egitim-baslik">Sakarya Üniversitesi - Bilgisayar Mühendisliği</h5>
+            <p class="tarih">2023 - Devam Ediyor</p>
+            <p>Yazılım geliştirme, algoritmalar, veritabanı sistemleri, web teknolojileri ve yapay zeka üzerine eğitim
+              alıyorum.</p>
+
+            <h5 class="egitim-baslik mt-4">Atatürk Anadolu Lisesi</h5>
+            <p class="tarih">2018 - 2022</p>
+          </article>
+        </div>
+
+        <!-- İş Tecrübeleri -->
+        <div class="cv-kart">
+          <h2 class="bolum-baslik">İş Tecrübeleri</h2>
+          <article>
+            <h5 class="egitim-baslik">Abbas Waffle - Cadde 54</h5>
+            <p class="tarih">2022 - 2023 (5 ay)</p>
+            <p>Garsonluk</p>
+
+            <h5 class="egitim-baslik mt-4">Onar Bilişim</h5>
+            <p class="tarih">2021 - 2022 (6 ay)</p>
+            <p>Bilgisayar bakımı ve parça değişimi</p>
+          </article>
+        </div>
+
+        <!-- Beceriler -->
+        <div class="cv-kart">
+          <h2 class="bolum-baslik">Beceriler</h2>
+          <div class="beceriler-grup">
+            <span class="beceri-item">HTML</span>
+            <span class="beceri-item">CSS</span>
+            <span class="beceri-item">JavaScript</span>
+            <span class="beceri-item">Bootstrap</span>
+            <span class="beceri-item">Vue.js</span>
+            <span class="beceri-item">C#</span>
+            <span class="beceri-item">C++</span>
+            <span class="beceri-item">Python</span>
+            <span class="beceri-item">Tensorflow</span>
+          </div>
+        </div>
+
+        <!-- Yabancı Dil -->
+        <div class="cv-kart">
+          <h2 class="bolum-baslik">Yabancı Dil</h2>
+          <div class="d-flex align-items-center">
+            <h5 class="egitim-baslik mb-0">İngilizce</h5>
+            <span class="badge bg-primary ms-2">B1-B2</span>
+          </div>
+        </div>
+      </div>
     </div>
-
-    <!-- CV İçeriği -->
-    <div class="col-md-8 order-2 order-md-1">
-      
-      <section class="mb-4">
-        <h2 class="bolum-baslik">Eğitim</h2>
-        <article>
-          <h5 class="egitim-baslik">Atatürk Anadolu Lisesi</h5>
-          <p class="tarih">2018 - 2022</p>
-          <h5 class="egitim-baslik">Sakarya Üniversitesi - Bilgisayar Mühendisliği</h5>
-          <p class="tarih">2023 - Devam Ediyor</p>
-          <p>Yazılım geliştirme, algoritmalar, veritabanı sistemleri, web teknolojileri ve yapayzeka üzerine eğitim alıyorum.</p>
-        </article>
-      </section>
-
-      <section class="mb-4">
-        <h2 class="bolum-baslik">İş Tecrübeleri</h2>
-        <ul>
-          <li><h5 class="egitim-baslik">Abbas Waffle - Cadde 54</h5></li>
-          <p>2022 - 2023 (5 ay) garsonluk</p>
-          <li><h5 class="egitim-baslik">Onar Bilişim</h5></li>
-          <p>2021 - 2022 (6 ay) bilgisayar bakımı ve parça değişimi</p>
-        </ul>
-      </section>
-
-      <section class="mb-4">
-        <h2 class="bolum-baslik">Beceriler</h2>
-        <ul>
-          <li>HTML, CSS, JavaScript</li>
-          <li>Bootstrap, Vue.js</li>
-          <li>C#, C++, Python</li>
-          <li>Tensorflow ile yapayzeka programlama</li>
-        </ul>
-      </section>
-
-      <section class="mb-4">
-        <h2 class="bolum-baslik">Sertifikalar</h2>
-        <ul>
-          <li>Aktif bir sertifika bulunmamaktadır</li>
-        </ul>
-      </section>
-
-      <section class="mb-4">
-        <h2 class="bolum-baslik">Yabancı Dil</h2>
-        <p>İngilizce - Orta Seviye (B1-B2)</p>
-      </section>
-    </div>
-</main>
+  </main>
 
 
   <!-- Alt Bilgi -->
@@ -99,4 +134,5 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

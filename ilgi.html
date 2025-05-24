@@ -1,10 +1,21 @@
+<?php
+header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+header("Cache-Control: post-check=0, pre-check=0", false);
+header("Pragma: no-cache");
+?>
 <!DOCTYPE html>
 <html lang="tr">
+
 <head>
   <meta charset="UTF-8" />
-  <title>İlgi Alanlarım - Oyunlar</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <title>İlgi Alanlarım</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="css/ilgi.css" />  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/ilgi.css">
 </head>
 
 <body>
@@ -22,32 +33,69 @@
           <li class="nav-item"><a class="nav-link" href="cv.html">Özgeçmiş</a></li>
           <li class="nav-item"><a class="nav-link" href="sehrim.html">Şehrim</a></li>
           <li class="nav-item"><a class="nav-link active" href="ilgi.html">İlgi Alanlarım</a></li>
-          <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
+          <li class="nav-item"><a class="nav-link" href="iletisim.php">İletişim</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- Başlık -->
-  <header class="bg-light p-4 text-center">
-    <h1 class="baslik">İlgi Alanlarım</h1>
-    <p class="alt-baslik">Video oyunları benim için sadece bir eğlence aracı değil, aynı zamanda stratejik düşünme, takım çalışması ve problem çözme becerilerimi geliştiren bir alan. hem hızlı refleks ve strateji gerektiren rekabetçi çok oyunculu oyunlarla hızlı düşünme becerilerimi geliştirir, hem de derin hikaye anlatımı ve atmosfer sunan aksiyon-macera türündeki oyunlarda kaybolmayı tercih ederim. Yeri gelirse zorlu mücadeleler içeren RPG ve hayatta kalma türlerindeki oyunlar, bana meydan okuma hissi verirken; stratejik ve planlı hareket etme yeteneğimi geliştir. Bu çeşitlilik sayesinde oyunlar hem rekabetçi hem de keşif ve hikaye odaklı yanlarıyla beni her yönden ufkumu açarken beni motive edebiliyor.</p>
+  <!-- Header Bölümü -->
+  <header class="new-header">
+    <div class="container">
+      <h1>İlgi Alanlarım</h1>
+      <p>Oyunlar ve Müzik Tutkum</p>
+    </div>
   </header>
 
-  <!-- Oyunlar -->
- <div class="container my-5">
-    <h1 class="text-center mb-4">Favori Oyunlarım</h1>
-    <div id="oyunlar" class="row gy-4"></div>
-  </div>
+  <!-- Oyunlar Bölümü -->
+  <section class="interests-section">
+    <div class="container">
+      <h2 class="section-title text-center mb-4">
+        <i class="fas fa-gamepad me-2"></i>Favori Oyunlarım
+      </h2>
+      <div id="games-container" class="row g-4">
+        <!-- Oyunlar buraya dinamik olarak eklenecek -->
+      </div>
+    </div>
+  </section>
 
-  <script src="js/ilgi.js"></script>
-
+  <!-- Müzik Bölümü -->
+  <section class="interests-section bg-light">
+    <div class="container">
+      <h2 class="section-title text-center mb-4">
+        <i class="fas fa-music me-2"></i>Favori Müziklerim
+      </h2>
+      <div id="music-container" class="row g-4">
+        <!-- Spotify çalma listeleri buraya eklenecek -->
+        <div class="col-md-6">
+          <div class="spotify-embed">
+            <iframe style="border-radius:12px"
+              src="https://open.spotify.com/embed/playlist/37i9dQZF1EIUpKI9y26fOy?utm_source=generator" width="100%"
+              height="352" frameBorder="0" allowfullscreen=""
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"></iframe>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="spotify-embed">
+            <iframe style="border-radius:12px"
+              src="https://open.spotify.com/embed/playlist/37i9dQZF1DZ06evO49263K?utm_source=generator" width="100%"
+              height="352" frameBorder="0" allowfullscreen=""
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- Footer -->
   <footer class="bg-dark text-white text-center p-3">
-    <p>&copy; 2025 Eymen Çalışkan - Web Teknolojileri Projesi</p>
+    <p>&copy; 2024 Eymen Çalışkan - Web Teknolojileri Projesi</p>
   </footer>
 
-  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/ilgi.js"></script>
 </body>
+
 </html>

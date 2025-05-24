@@ -1,37 +1,219 @@
-
+/* Ana stiller */
 body {
   font-family: 'Segoe UI', sans-serif;
-}
-
-.baslik {
-  font-size: 2rem;
-  color: #333;
-}
-
-.alt-baslik {
-  font-size: 0.8rem;
-  color: #b4b4b4;
-}
-
-.bolum-baslik {
-  font-size: 1.8rem;
+  background-color: #f8f9fa;
   color: #2c3e50;
-  margin-bottom: 15px;
-}
-
-.tanitim-metin {
-  font-size: 1rem;
   line-height: 1.6;
 }
 
-.resim-aciklama {
-  margin-top: 10px;
-  font-style: italic;
+/* Hero bölümü */
+.hero {
+  background: linear-gradient(135deg, #3498db, #2c3e50);
+  padding: 6rem 0;
+  color: white;
+  margin-bottom: 4rem;
 }
 
-.gorsel-galerisi img {
-  width: 100%;
-  height: 250px;
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+/* Profil fotoğrafı */
+.profile-img {
+  width: 300px;
+  height: 300px;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 20px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  transform: rotate(-3deg);
+  transition: transform 0.3s ease;
+  border: 8px solid white;
+}
+
+.profile-img:hover {
+  transform: rotate(0deg);
+}
+
+/* İçerik kartları */
+.content-card {
+  background-color: white;
+  border-radius: 15px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.content-card:hover {
+  transform: translateY(-5px);
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 50%;
+  height: 3px;
+  background: linear-gradient(to right, #3498db, transparent);
+}
+
+/* Özellikler listesi */
+.features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.features-list li {
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  background-color: #f8f9fa;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.features-list li:hover {
+  background-color: #e8f4fc;
+  transform: translateX(10px);
+}
+
+.features-list li i {
+  font-size: 1.5rem;
+  color: #3498db;
+  margin-top: 0.2rem;
+}
+
+.features-list li div {
+  flex: 1;
+}
+
+.features-list li strong {
+  display: block;
+  font-size: 1.1rem;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.features-list li p {
+  margin: 0;
+  color: #666;
+  font-size: 0.95rem;
+}
+
+/* İlgi alanları kartları */
+.card {
+  border: none;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.card-title i {
+  color: #3498db;
+}
+
+.card-text {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Sosyal medya linkleri */
+.social-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background-color: #f8f9fa;
+  color: #2c3e50;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.social-link:hover {
+  background-color: #3498db;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.social-link i {
+  margin-right: 0.5rem;
+}
+
+/* Responsive düzenlemeler */
+@media (max-width: 768px) {
+  .hero {
+    padding: 4rem 0;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .profile-img {
+    width: 250px;
+    height: 250px;
+    margin-bottom: 2rem;
+  }
+
+  .content-card {
+    padding: 1.5rem;
+  }
+}
+
+/* Animasyonlar */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-in {
+  animation: fadeIn 1s ease-out forwards;
 }
