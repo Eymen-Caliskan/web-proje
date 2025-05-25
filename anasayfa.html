@@ -1,8 +1,3 @@
-<?php
-header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
-header("Cache-Control: post-check=0, pre-check=0", false);
-header("Pragma: no-cache");
-?>
 <!DOCTYPE html>
 <html lang="tr">
 
@@ -15,12 +10,12 @@ header("Pragma: no-cache");
   <title>Kişisel Web Sitem</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/anasayfa.css">
 </head>
 
 <body>
   <!-- Navigasyon -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
       <a class="navbar-brand" href="anasayfa.html">Kişisel Web Sitem</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
@@ -32,75 +27,114 @@ header("Pragma: no-cache");
           <li class="nav-item"><a class="nav-link" href="cv.html">Özgeçmiş</a></li>
           <li class="nav-item"><a class="nav-link" href="sehrim.html">Şehrim</a></li>
           <li class="nav-item"><a class="nav-link" href="ilgi.html">İlgi Alanlarım</a></li>
-          <li class="nav-item"><a class="nav-link" href="iletisim.php">İletişim</a></li>
+          <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- Header -->
-  <header class="hero-section">
+  <!-- Hero Section -->
+  <section class="hero">
     <div class="container text-center">
-      <h1>Eymen Çalışkan</h1>
-      <p class="lead">Bilgisayar Mühendisliği Öğrencisi</p>
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <h1 class="animate-in mb-3">Eymen Çalışkan</h1>
+          <p class="lead animate-in mb-4">Bilgisayar Mühendisliği Öğrencisi</p>
+          <div class="social-links animate-in d-flex justify-content-center gap-4">
+            <a href="https://github.com/Eymen-Caliskan" target="_blank" class="social-link btn btn-light btn-lg">
+              <i class="fab fa-github me-2"></i>GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/eymen-%C3%A7al%C4%B1%C5%9Fkan-184a09351/" target="_blank"
+              class="social-link btn btn-light btn-lg">
+              <i class="fab fa-linkedin me-2"></i>LinkedIn
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
-  </header>
+  </section>
 
   <!-- Ana İçerik -->
   <main class="container my-5">
     <div class="row">
-      <!-- Kişisel Bilgiler -->
+      <!-- Hakkımda -->
       <div class="col-md-6 mb-4">
-        <div class="info-card">
-          <h2><i class="fas fa-user me-2"></i>Hakkımda</h2>
+        <div class="content-card animate-in">
+          <h2 class="section-title"><i class="fas fa-user me-2"></i>Hakkımda</h2>
           <p>Merhaba! Ben Eymen Çalışkan. 2004 yılında Sakarya'da doğdum. Şu anda Sakarya Üniversitesi Bilgisayar
             Mühendisliği bölümünde eğitimime devam ediyorum.</p>
           <p>Teknoloji ve yazılım dünyasına olan tutkum beni sürekli yeni şeyler öğrenmeye teşvik ediyor. Özellikle
-            yapay zeka alanında kendimi geliştirmeye çalışıyorum. Aynı zamanda oyun geliştirme ile ilgileniyorum ve
-            e-spor dünyasını yakından takip ediyorum.</p>
+            yapay zeka alanında kendimi geliştirmeye çalışıyorum.</p>
           <p>Müzik, hayatımın vazgeçilmez bir parçası. Boş zamanlarımda müzik dinlemeyi ve yeni türler keşfetmeyi
             seviyorum.</p>
         </div>
       </div>
 
+      <!-- Eğitim -->
+      <div class="col-md-6 mb-4">
+        <div class="content-card animate-in">
+          <h2 class="section-title"><i class="fas fa-graduation-cap me-2"></i>Eğitim</h2>
+          <ul class="features-list">
+            <li>
+              <i class="fas fa-university"></i>
+              <div>
+                <strong>Sakarya Üniversitesi</strong>
+                <p>Bilgisayar Mühendisliği (2021 - Devam)</p>
+              </div>
+            </li>
+          </ul>
+          <a href="cv.html" class="btn btn-primary mt-3">CV'mi Görüntüle <i class="fas fa-file-alt ms-2"></i></a>
+        </div>
+      </div>
+
       <!-- İlgi Alanları -->
       <div class="col-md-6 mb-4">
-        <div class="info-card">
-          <h2><i class="fas fa-heart me-2"></i>İlgi Alanlarım</h2>
-          <ul class="interest-list">
-            <li><i class="fas fa-robot"></i> Yapay Zeka</li>
-            <li><i class="fas fa-gamepad"></i> Oyun Geliştirme</li>
-            <li><i class="fas fa-trophy"></i> E-Spor</li>
-            <li><i class="fas fa-music"></i> Müzik</li>
-            <li><i class="fas fa-code"></i> Yazılım Geliştirme</li>
+        <div class="content-card animate-in">
+          <h2 class="section-title"><i class="fas fa-heart me-2"></i>İlgi Alanlarım</h2>
+          <ul class="features-list">
+            <li>
+              <i class="fas fa-robot"></i>
+              <div>
+                <strong>Yapay Zeka</strong>
+                <p>Makine öğrenimi ve derin öğrenme alanlarında kendimi geliştiriyorum.</p>
+              </div>
+            </li>
+            <li>
+              <i class="fas fa-gamepad"></i>
+              <div>
+                <strong>Oyun Geliştirme</strong>
+                <p>Unity ve Unreal Engine ile oyun geliştirme deneyimlerim var.</p>
+              </div>
+            </li>
+            <li>
+              <i class="fas fa-code"></i>
+              <div>
+                <strong>Yazılım Geliştirme</strong>
+                <p>Web teknolojileri ve mobil uygulama geliştirme ile ilgileniyorum.</p>
+              </div>
+            </li>
           </ul>
         </div>
       </div>
 
       <!-- Şehrim -->
       <div class="col-md-6 mb-4">
-        <div class="info-card">
-          <h2><i class="fas fa-map-marker-alt me-2"></i>Memleketim</h2>
+        <div class="content-card animate-in">
+          <h2 class="section-title"><i class="fas fa-map-marker-alt me-2"></i>Memleketim</h2>
           <p>Sakarya'nın doğal güzellikleri, tarihi yerleri ve modern yaşamı ile tanınan bir şehir. Sapanca Gölü,
             Acarlar Longozu ve tarihi Taraklı evleri gibi görülmeye değer yerleri bulunmaktadır.</p>
-          <a href="sehrim.html" class="btn btn-outline-primary mt-2">Şehrimi Keşfet</a>
+          <a href="sehrim.html" class="btn btn-primary mt-3">Şehrimi Keşfet <i class="fas fa-arrow-right ms-2"></i></a>
         </div>
       </div>
 
-      <!-- Eğitim -->
-      <div class="col-md-6 mb-4">
-        <div class="info-card">
-          <h2><i class="fas fa-graduation-cap me-2"></i>Eğitim</h2>
-          <p>Sakarya Üniversitesi<br>Bilgisayar Mühendisliği<br>2021 - Devam Ediyor</p>
-          <a href="cv.html" class="btn btn-outline-primary mt-2">CV'mi Görüntüle</a>
-        </div>
-      </div>
     </div>
   </main>
 
   <!-- Footer -->
-  <footer class="bg-dark text-white text-center p-3">
-    <p>&copy; 2024 Eymen Çalışkan - Web Teknolojileri Projesi</p>
+  <footer class="bg-dark text-white text-center py-4">
+    <div class="container">
+      <p class="mb-0">&copy; 2024 Eymen Çalışkan - Web Teknolojileri Projesi</p>
+    </div>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

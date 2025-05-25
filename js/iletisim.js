@@ -28,7 +28,7 @@ function jsKontrol() {
   // Telefon kontrolü
   const telRegex = /^[0-9]{10,11}$/;
   if (!telRegex.test(telefon)) {
-    showError('telefon', 'Geçerli bir telefon numarası giriniz (10-11 rakam)');
+    showError('telefon', 'Telefon numarası 10-11 haneli olmalıdır');
     hasError = true;
   }
 

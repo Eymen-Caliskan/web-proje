@@ -3,10 +3,11 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #a8e6cf 0%, #3498db 100%);
+  background: linear-gradient(135deg, #98f5e1 0%, #8dd9f3 100%);
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Kart görünümü */
@@ -89,56 +90,98 @@ a:hover {
 }
 
 .form-container {
-  max-width: 500px;
-  margin: 80px auto 20px;
   background: white;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: clamp(20px, 5vw, 35px);
+  border-radius: clamp(10px, 2vw, 15px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  width: min(90%, 380px);
+  margin: 15px;
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+  margin: 0 0 clamp(15px, 4vw, 25px) 0;
+  font-size: clamp(18px, 4vw, 24px);
+  font-weight: 500;
 }
 
 .form-control,
 .form-select {
-  margin-bottom: 15px;
-  border: 1px solid #ddd;
-  padding: 8px 12px;
+  width: 100%;
+  padding: clamp(8px, 2vw, 12px);
+  margin-bottom: clamp(10px, 2vw, 15px);
+  border: 1px solid #e0e0e0;
+  border-radius: clamp(6px, 1.5vw, 8px);
+  background-color: #fafafa;
+  box-sizing: border-box;
+  font-size: clamp(13px, 2vw, 14px);
+  transition: all 0.3s ease;
 }
 
 .form-control:focus,
 .form-select:focus {
   border-color: #3498db;
-  box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.25);
+  background-color: #fff;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.1);
 }
 
 .gender-group {
-  margin: 15px 0;
-  text-align: center;
+  background-color: #fafafa;
+  padding: clamp(8px, 2vw, 12px);
+  border-radius: clamp(6px, 1.5vw, 8px);
+  border: 1px solid #e0e0e0;
+  margin-bottom: clamp(10px, 2vw, 15px);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
 }
 
-.gender-group label {
-  margin-right: 20px;
+.gender-group label:first-child {
+  width: 100%;
+  margin-bottom: 5px;
+  color: #555;
+  font-size: clamp(13px, 2vw, 14px);
+}
+
+.gender-options {
+  display: flex;
+  gap: 20px;
+}
+
+.gender-option {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.gender-option label {
+  color: #555;
+  font-size: clamp(13px, 2vw, 14px);
   cursor: pointer;
 }
 
-.gender-group input[type="radio"] {
-  margin-right: 5px;
+.gender-option input[type="radio"] {
   cursor: pointer;
 }
 
 textarea {
   resize: none;
-  min-height: 100px;
+  min-height: clamp(80px, 15vw, 100px);
 }
 
 .btn {
   width: 100%;
-  margin-bottom: 10px;
-  padding: 10px;
+  padding: clamp(10px, 2vw, 12px);
   border: none;
-  border-radius: 5px;
-  cursor: pointer;
+  border-radius: clamp(6px, 1.5vw, 8px);
+  font-size: clamp(14px, 2vw, 15px);
   font-weight: 500;
+  cursor: pointer;
   transition: all 0.3s ease;
+  margin-bottom: clamp(8px, 1.5vw, 10px);
 }
 
 .btn-primary {
@@ -168,31 +211,85 @@ textarea {
   background-color: #7f8c8d;
 }
 
-/* Form başlığı için stil */
-h2 {
-  color: #2c3e50;
-  margin-bottom: 25px;
-  font-weight: 500;
+.is-invalid {
+  border-color: #e74c3c !important;
+  background-color: #fff !important;
+}
+
+.invalid-feedback {
+  color: #e74c3c;
+  font-size: clamp(11px, 1.8vw, 12px);
+  margin-top: -8px;
+  margin-bottom: 8px;
+}
+
+.alert {
+  padding: clamp(10px, 2vw, 12px);
+  border-radius: clamp(6px, 1.5vw, 8px);
+  margin-bottom: clamp(15px, 3vw, 20px);
+  font-size: clamp(13px, 2vw, 14px);
+}
+
+.alert-danger {
+  background-color: #fef2f2;
+  border: 1px solid #fee2e2;
+  color: #dc2626;
+}
+
+.alert ul {
+  margin: 5px 0 0 20px;
+  padding: 0;
+}
+
+.alert li {
+  margin-bottom: 3px;
+}
+
+/* Responsive düzenlemeler */
+@media (max-width: 480px) {
+  .form-container {
+    margin: 15px;
+    padding: 25px;
+  }
+
+  h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
 }
 
 /* Placeholder stilleri */
 ::placeholder {
-  color: #95a5a6;
-  opacity: 0.7;
+  color: #999;
+  opacity: 1;
 }
 
-/* Responsive düzenlemeler */
-@media (max-width: 576px) {
+/* Tablet için özel ayarlar */
+@media (min-width: 768px) and (max-width: 1024px) {
   .form-container {
-    margin: 60px 15px 20px;
-    padding: 20px;
+    width: min(70%, 380px);
+  }
+}
+
+/* Büyük ekranlar için özel ayarlar */
+@media (min-width: 1200px) {
+  .form-container {
+    transform: scale(1.05);
+  }
+}
+
+/* Mobil yatay görünüm için özel ayarlar */
+@media (max-height: 600px) and (orientation: landscape) {
+  body {
+    align-items: flex-start;
+    padding: 20px 0;
   }
 
-  .btn {
-    padding: 8px;
+  .form-container {
+    margin: 0 auto;
   }
 
-  h2 {
-    font-size: 1.5rem;
+  textarea {
+    min-height: 60px;
   }
 }
