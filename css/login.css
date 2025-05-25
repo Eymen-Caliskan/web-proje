@@ -68,3 +68,28 @@ body {
   color: #3498db;
   text-decoration: none;
 }
+
+.success-message {
+  font-family: Arial, sans-serif;
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #f0f8f0;
+  border: 1px solid #4CAF50;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.success-link {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 8px 15px;
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  border-radius: 3px;
+}
+
+.success-link:hover {
+  background-color: #45a049;
+}

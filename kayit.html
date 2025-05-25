@@ -17,31 +17,32 @@ header("Pragma: no-cache");
   <link rel="stylesheet" href="css/kayit.css">
 </head>
 
-<body class="bg-light">
-
-  <div class="container d-flex justify-content-center align-items-center" style="min-height: 100vh;">
-    <div class="card p-4 shadow w-100" style="max-width: 400px;">
-      <h2 class="text-center mb-4">Kayıt Ol</h2>
-      <form action="kayit.php" method="POST">
-        <div class="mb-3">
-          <label for="kullanici_adi" class="form-label">Kullanıcı Adı</label>
-          <input type="text" class="form-control" id="kullanici_adi" name="kullanici_adi" required>
-        </div>
-        <div class="mb-3">
-          <label for="email" class="form-label">E-posta</label>
-          <input type="email" class="form-control" id="email" name="email" required>
-        </div>
-        <div class="mb-3">
-          <label for="sifre" class="form-label">Şifre</label>
-          <input type="password" class="form-control" id="sifre" name="sifre" required>
-        </div>
-        <div class="mb-3">
-          <label for="sifre_tekrar" class="form-label">Şifre Tekrar</label>
-          <input type="password" class="form-control" id="sifre_tekrar" name="sifre_tekrar" required>
-        </div>
-        <button type="submit" class="btn btn-primary w-100">Kayıt Ol</button>
-      </form>
-      <p class="mt-3 text-center">Zaten hesabınız var mı? <a href="index.html">Giriş Yap</a></p>
+<body>
+  <div class="container d-flex justify-content-center align-items-center vh-100">
+    <div class="form-container">
+      <div class="card p-4">
+        <h2 class="text-center mb-4">Kayıt Ol</h2>
+        <form action="kayit.php" method="POST">
+          <div class="mb-3">
+            <label for="kullanici_adi" class="form-label">Kullanıcı Adı</label>
+            <input type="text" class="form-control" id="kullanici_adi" name="kullanici_adi" required>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">E-posta</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+          </div>
+          <div class="mb-3">
+            <label for="sifre" class="form-label">Şifre</label>
+            <input type="password" class="form-control" id="sifre" name="sifre" required>
+          </div>
+          <div class="mb-3">
+            <label for="sifre_tekrar" class="form-label">Şifre Tekrar</label>
+            <input type="password" class="form-control" id="sifre_tekrar" name="sifre_tekrar" required>
+          </div>
+          <button type="submit" class="btn btn-primary w-100">Kayıt Ol</button>
+        </form>
+        <p class="mt-3 text-center">Zaten hesabınız var mı? <a href="index.html">Giriş Yap</a></p>
+      </div>
     </div>
   </div>
 
